@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "UdemyFirstProject", "UdemyFirstProject\UdemyFirstProject.dtproj", "{DFAFE267-502E-446F-AFF8-229C2146A6C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFAFE267-502E-446F-AFF8-229C2146A6C2}.Development|Default.ActiveCfg = Development
+		{DFAFE267-502E-446F-AFF8-229C2146A6C2}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D6644EB3-25A8-41E9-B664-447595410589}
+	EndGlobalSection
+EndGlobal
