@@ -11,16 +11,168 @@
   DTS:LocaleID="4105"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{49C0471B-821A-42A4-A6B8-9FE0827C0C6E}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{EFFCFB7C-7FFE-422A-AC89-CCD6AF30D38C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[CSV Connection]"
+      DTS:refId="Package.ConnectionManagers[ConversionErrorFileConnection]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{326CAC0D-2825-4EAB-A8ED-6C31D730656C}"
-      DTS:ObjectName="CSV Connection">
+      DTS:DTSID="{FDDCC0B8-13D1-4D2A-9B3D-F2D4861D2484}"
+      DTS:ObjectName="ConversionErrorFileConnection">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="4105"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\vshaa\Desktop\Serious MSBI\Files\ErrorDuringConversion.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerCode"
+              DTS:DTSID="{F2072231-2D58-40DE-971B-4A317D255E2C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerName"
+              DTS:DTSID="{8F764DC3-0195-4E51-9E80-52009093D179}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerAmount"
+              DTS:DTSID="{8552F749-048D-49B1-BE1E-331888AB6AB6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SalesDate"
+              DTS:DTSID="{2AD3ABDB-65E2-4927-8A7F-4CC3BACECC28}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NewCustomerName"
+              DTS:DTSID="{3CB46FCF-340D-4519-8EE3-CF5DED8FA8B0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{F6BF323D-5E91-4D85-8808-A8F2C98DB953}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{7C5BF35E-03BD-4B1D-A142-AEBC3C73EF7F}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ErrorConnectionManager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{CE9CA10A-0029-4B4E-B4CF-A82966A17584}"
+      DTS:ObjectName="ErrorConnectionManager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="4105"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\vshaa\Desktop\Serious MSBI\Files\ErrorTextFile.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerCode"
+              DTS:DTSID="{E85E50D9-1EDA-49FE-AC4B-DD29950828EB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerName"
+              DTS:DTSID="{0E709E35-7402-471D-BB23-36FD610BEF91}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerAmount"
+              DTS:DTSID="{ADF033A5-59BE-411A-B303-C57385353C5A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SalesDate"
+              DTS:DTSID="{734C825D-BEC6-4B0C-A816-E1F6E1AD8F22}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NewCustomerName"
+              DTS:DTSID="{C2028DBC-2F8D-4424-925D-9DE4428D22BA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerAmountConv"
+              DTS:DTSID="{16C7D795-EB08-41FE-8C1B-C014A4F972C1}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[NewCSVConnection]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{1A7C3A0A-E7D4-4894-9C8C-27E2DE8CA888}"
+      DTS:ObjectName="NewCSVConnection">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -39,7 +191,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CustomerCode"
-              DTS:DTSID="{86FDDCD0-1B3E-4F5F-9830-B8ECF6E6DBA2}"
+              DTS:DTSID="{B796F9E7-9B46-4403-BC2B-E899577939B0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +200,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CustomerName"
-              DTS:DTSID="{B769A419-D405-4A26-9B53-52BD53487BE4}"
+              DTS:DTSID="{2B0CF899-620B-484E-A42D-BD4A2768B4FD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,43 +209,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CustomerAmount"
-              DTS:DTSID="{669210DF-CB08-4693-B80B-0E877000680A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="SalesDate"
-              DTS:DTSID="{EEBF155B-A80C-42F5-A3AB-0E14F6FF4643}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CountryName"
-              DTS:DTSID="{0A98F0B7-80EE-487F-9D13-C4883BEE7AEF}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="StatesName"
-              DTS:DTSID="{31865B52-E75E-41EE-81FF-4EEC106B9798}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ProductName"
-              DTS:DTSID="{DFBF51A1-AF06-416D-BCA8-869352E9A224}"
+              DTS:DTSID="{1A3C4D21-A4B2-4AE0-8773-CA1695B018A4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -101,8 +217,8 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="SalesPersonName"
-              DTS:DTSID="{0A5631E6-2984-4866-968D-946031F09C71}"
+              DTS:ObjectName="SalesDate"
+              DTS:DTSID="{F3642422-BBC5-4E6A-AB0A-FDAD99DDF320}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -135,6 +251,226 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\Load CSV\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load CSV\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load CSV\Conditional Split.Inputs[Conditional Split Input].Columns[CustomerAmountConv]"
+                      cachedDataType="cy"
+                      cachedName="CustomerAmountConv"
+                      lineageId="Package\Load CSV\String to Numeric.Outputs[Data Conversion Output].Columns[CustomerAmountConv]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load CSV\Conditional Split.Outputs[Error]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Error"
+                  synchronousInputId="Package\Load CSV\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">(#{Package\Load CSV\String to Numeric.Outputs[Data Conversion Output].Columns[CustomerAmountConv]} &lt; 0) || (#{Package\Load CSV\String to Numeric.Outputs[Data Conversion Output].Columns[CustomerAmountConv]} == 0)</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">(CustomerAmountConv &lt; 0) || (CustomerAmountConv == 0)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load CSV\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Load CSV\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load CSV\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Load CSV\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load CSV\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load CSV\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load CSV\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load CSV\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load CSV\Covnersion Error Rows"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="4105"
+              name="Covnersion Error Rows"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load CSV\Covnersion Error Rows.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ConversionErrorFileConnection]"
+                  connectionManagerRefId="Package.ConnectionManagers[ConversionErrorFileConnection]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load CSV\Covnersion Error Rows.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load CSV\Covnersion Error Rows.Inputs[Flat File Destination Input].Columns[CustomerCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CustomerCode"
+                      externalMetadataColumnId="Package\Load CSV\Covnersion Error Rows.Inputs[Flat File Destination Input].ExternalColumns[CustomerCode]"
+                      lineageId="Package\Load CSV\Read from CSV.Outputs[Flat File Source Output].Columns[CustomerCode]" />
+                    <inputColumn
+                      refId="Package\Load CSV\Covnersion Error Rows.Inputs[Flat File Destination Input].Columns[CustomerName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CustomerName"
+                      externalMetadataColumnId="Package\Load CSV\Covnersion Error Rows.Inputs[Flat File Destination Input].ExternalColumns[CustomerName]"
+                      lineageId="Package\Load CSV\Read from CSV.Outputs[Flat File Source Output].Columns[CustomerName]" />
+                    <inputColumn
+                      refId="Package\Load CSV\Covnersion Error Rows.Inputs[Flat File Destination Input].Columns[CustomerAmount]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CustomerAmount"
+                      externalMetadataColumnId="Package\Load CSV\Covnersion Error Rows.Inputs[Flat File Destination Input].ExternalColumns[CustomerAmount]"
+                      lineageId="Package\Load CSV\Read from CSV.Outputs[Flat File Source Output].Columns[CustomerAmount]" />
+                    <inputColumn
+                      refId="Package\Load CSV\Covnersion Error Rows.Inputs[Flat File Destination Input].Columns[SalesDate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SalesDate"
+                      externalMetadataColumnId="Package\Load CSV\Covnersion Error Rows.Inputs[Flat File Destination Input].ExternalColumns[SalesDate]"
+                      lineageId="Package\Load CSV\Read from CSV.Outputs[Flat File Source Output].Columns[SalesDate]" />
+                    <inputColumn
+                      refId="Package\Load CSV\Covnersion Error Rows.Inputs[Flat File Destination Input].Columns[NewCustomerName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="NewCustomerName"
+                      externalMetadataColumnId="Package\Load CSV\Covnersion Error Rows.Inputs[Flat File Destination Input].ExternalColumns[NewCustomerName]"
+                      lineageId="Package\Load CSV\Upper Case Name.Outputs[Derived Column Output].Columns[NewCustomerName]" />
+                    <inputColumn
+                      refId="Package\Load CSV\Covnersion Error Rows.Inputs[Flat File Destination Input].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\Load CSV\Covnersion Error Rows.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      lineageId="Package\Load CSV\String to Numeric.Outputs[Data Conversion Error Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\Load CSV\Covnersion Error Rows.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      externalMetadataColumnId="Package\Load CSV\Covnersion Error Rows.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      lineageId="Package\Load CSV\String to Numeric.Outputs[Data Conversion Error Output].Columns[ErrorColumn]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load CSV\Covnersion Error Rows.Inputs[Flat File Destination Input].ExternalColumns[CustomerCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CustomerCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV\Covnersion Error Rows.Inputs[Flat File Destination Input].ExternalColumns[CustomerName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CustomerName" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV\Covnersion Error Rows.Inputs[Flat File Destination Input].ExternalColumns[CustomerAmount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CustomerAmount" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV\Covnersion Error Rows.Inputs[Flat File Destination Input].ExternalColumns[SalesDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SalesDate" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV\Covnersion Error Rows.Inputs[Flat File Destination Input].ExternalColumns[NewCustomerName]"
+                      dataType="wstr"
+                      length="50"
+                      name="NewCustomerName" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV\Covnersion Error Rows.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      dataType="i4"
+                      name="ErrorCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV\Covnersion Error Rows.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      dataType="i4"
+                      name="ErrorColumn" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
             <component
               refId="Package\Load CSV\Customer DataWarehouse"
               componentClassID="Microsoft.ManagedComponentHost"
@@ -267,6 +603,127 @@
               </outputs>
             </component>
             <component
+              refId="Package\Load CSV\Error Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="4105"
+              name="Error Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load CSV\Error Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ErrorConnectionManager]"
+                  connectionManagerRefId="Package.ConnectionManagers[ErrorConnectionManager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load CSV\Error Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load CSV\Error Destination.Inputs[Flat File Destination Input].Columns[CustomerCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CustomerCode"
+                      externalMetadataColumnId="Package\Load CSV\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[CustomerCode]"
+                      lineageId="Package\Load CSV\Read from CSV.Outputs[Flat File Source Output].Columns[CustomerCode]" />
+                    <inputColumn
+                      refId="Package\Load CSV\Error Destination.Inputs[Flat File Destination Input].Columns[CustomerName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CustomerName"
+                      externalMetadataColumnId="Package\Load CSV\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[CustomerName]"
+                      lineageId="Package\Load CSV\Read from CSV.Outputs[Flat File Source Output].Columns[CustomerName]" />
+                    <inputColumn
+                      refId="Package\Load CSV\Error Destination.Inputs[Flat File Destination Input].Columns[CustomerAmount]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CustomerAmount"
+                      externalMetadataColumnId="Package\Load CSV\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[CustomerAmount]"
+                      lineageId="Package\Load CSV\Read from CSV.Outputs[Flat File Source Output].Columns[CustomerAmount]" />
+                    <inputColumn
+                      refId="Package\Load CSV\Error Destination.Inputs[Flat File Destination Input].Columns[SalesDate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SalesDate"
+                      externalMetadataColumnId="Package\Load CSV\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[SalesDate]"
+                      lineageId="Package\Load CSV\Read from CSV.Outputs[Flat File Source Output].Columns[SalesDate]" />
+                    <inputColumn
+                      refId="Package\Load CSV\Error Destination.Inputs[Flat File Destination Input].Columns[NewCustomerName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="NewCustomerName"
+                      externalMetadataColumnId="Package\Load CSV\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[NewCustomerName]"
+                      lineageId="Package\Load CSV\Upper Case Name.Outputs[Derived Column Output].Columns[NewCustomerName]" />
+                    <inputColumn
+                      refId="Package\Load CSV\Error Destination.Inputs[Flat File Destination Input].Columns[CustomerAmountConv]"
+                      cachedDataType="cy"
+                      cachedName="CustomerAmountConv"
+                      externalMetadataColumnId="Package\Load CSV\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[CustomerAmountConv]"
+                      lineageId="Package\Load CSV\String to Numeric.Outputs[Data Conversion Output].Columns[CustomerAmountConv]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load CSV\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[CustomerCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CustomerCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[CustomerName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CustomerName" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[CustomerAmount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CustomerAmount" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[SalesDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SalesDate" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[NewCustomerName]"
+                      dataType="wstr"
+                      length="50"
+                      name="NewCustomerName" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[CustomerAmountConv]"
+                      dataType="cy"
+                      name="CustomerAmountConv" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
               refId="Package\Load CSV\Read from CSV"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -288,8 +745,8 @@
               <connections>
                 <connection
                   refId="Package\Load CSV\Read from CSV.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[CSV Connection]"
-                  connectionManagerRefId="Package.ConnectionManagers[CSV Connection]"
+                  connectionManagerID="Package.ConnectionManagers[NewCSVConnection]"
+                  connectionManagerRefId="Package.ConnectionManagers[NewCSVConnection]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -385,94 +842,6 @@
                           name="UseBinaryFormat">false</property>
                       </properties>
                     </outputColumn>
-                    <outputColumn
-                      refId="Package\Load CSV\Read from CSV.Outputs[Flat File Source Output].Columns[CountryName]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load CSV\Read from CSV.Outputs[Flat File Source Output].ExternalColumns[CountryName]"
-                      length="50"
-                      lineageId="Package\Load CSV\Read from CSV.Outputs[Flat File Source Output].Columns[CountryName]"
-                      name="CountryName"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load CSV\Read from CSV.Outputs[Flat File Source Output].Columns[StatesName]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load CSV\Read from CSV.Outputs[Flat File Source Output].ExternalColumns[StatesName]"
-                      length="50"
-                      lineageId="Package\Load CSV\Read from CSV.Outputs[Flat File Source Output].Columns[StatesName]"
-                      name="StatesName"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load CSV\Read from CSV.Outputs[Flat File Source Output].Columns[SalesPersonName]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load CSV\Read from CSV.Outputs[Flat File Source Output].ExternalColumns[SalesPersonName]"
-                      length="50"
-                      lineageId="Package\Load CSV\Read from CSV.Outputs[Flat File Source Output].Columns[SalesPersonName]"
-                      name="SalesPersonName"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load CSV\Read from CSV.Outputs[Flat File Source Output].Columns[ProductName]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load CSV\Read from CSV.Outputs[Flat File Source Output].ExternalColumns[ProductName]"
-                      length="50"
-                      lineageId="Package\Load CSV\Read from CSV.Outputs[Flat File Source Output].Columns[ProductName]"
-                      name="ProductName"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -500,30 +869,6 @@
                       dataType="str"
                       length="50"
                       name="SalesDate" />
-                    <externalMetadataColumn
-                      refId="Package\Load CSV\Read from CSV.Outputs[Flat File Source Output].ExternalColumns[CountryName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="CountryName" />
-                    <externalMetadataColumn
-                      refId="Package\Load CSV\Read from CSV.Outputs[Flat File Source Output].ExternalColumns[StatesName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="StatesName" />
-                    <externalMetadataColumn
-                      refId="Package\Load CSV\Read from CSV.Outputs[Flat File Source Output].ExternalColumns[ProductName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="ProductName" />
-                    <externalMetadataColumn
-                      refId="Package\Load CSV\Read from CSV.Outputs[Flat File Source Output].ExternalColumns[SalesPersonName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="SalesPersonName" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -548,6 +893,83 @@
                       refId="Package\Load CSV\Read from CSV.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Load CSV\Read from CSV.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load CSV\String to Numeric"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="String to Numeric"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load CSV\String to Numeric.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load CSV\String to Numeric.Inputs[Data Conversion Input].Columns[CustomerAmount]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CustomerAmount"
+                      lineageId="Package\Load CSV\Read from CSV.Outputs[Flat File Source Output].Columns[CustomerAmount]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load CSV\String to Numeric.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Load CSV\String to Numeric.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load CSV\String to Numeric.Outputs[Data Conversion Output].Columns[CustomerAmountConv]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      lineageId="Package\Load CSV\String to Numeric.Outputs[Data Conversion Output].Columns[CustomerAmountConv]"
+                      name="CustomerAmountConv"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load CSV\Read from CSV.Outputs[Flat File Source Output].Columns[CustomerAmount]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load CSV\String to Numeric.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Load CSV\String to Numeric.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load CSV\String to Numeric.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load CSV\String to Numeric.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load CSV\String to Numeric.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load CSV\String to Numeric.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -641,10 +1063,30 @@
           </components>
           <paths>
             <path
-              refId="Package\Load CSV.Paths[Derived Column Output]"
+              refId="Package\Load CSV.Paths[Conditional Split Default Output]"
               endId="Package\Load CSV\Customer DataWarehouse.Inputs[ADO NET Destination Input]"
+              name="Conditional Split Default Output"
+              startId="Package\Load CSV\Conditional Split.Outputs[Conditional Split Default Output]" />
+            <path
+              refId="Package\Load CSV.Paths[Data Conversion Error Output]"
+              endId="Package\Load CSV\Covnersion Error Rows.Inputs[Flat File Destination Input]"
+              name="Data Conversion Error Output"
+              startId="Package\Load CSV\String to Numeric.Outputs[Data Conversion Error Output]" />
+            <path
+              refId="Package\Load CSV.Paths[Data Conversion Output]"
+              endId="Package\Load CSV\Conditional Split.Inputs[Conditional Split Input]"
+              name="Data Conversion Output"
+              startId="Package\Load CSV\String to Numeric.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Load CSV.Paths[Derived Column Output]"
+              endId="Package\Load CSV\String to Numeric.Inputs[Data Conversion Input]"
               name="Derived Column Output"
               startId="Package\Load CSV\Upper Case Name.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Load CSV.Paths[Error]"
+              endId="Package\Load CSV\Error Destination.Inputs[Flat File Destination Input]"
+              name="Error"
+              startId="Package\Load CSV\Conditional Split.Outputs[Error]" />
             <path
               refId="Package\Load CSV.Paths[Flat File Source Output]"
               endId="Package\Load CSV\Upper Case Name.Inputs[Derived Column Input]"
@@ -678,45 +1120,53 @@
     design-time-name="Package\Load CSV">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="154.666666666667,42.6666666666667"
-          Id="Package\Load CSV\Read from CSV"
-          TopLeft="32.4999995157123,41.7368428908557" />
-        <NodeLayout
-          Size="205.333333333334,42.6666666666667"
-          Id="Package\Load CSV\Customer DataWarehouse"
-          TopLeft="99.3749985191971,182.000003425699" />
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="168,42.6666666666667"
           Id="Package\Load CSV\Upper Case Name"
-          TopLeft="140.624997904524,108.789475731903" />
+          TopLeft="21.8749996740369,101.639475859755" />
+        <NodeLayout
+          Size="205.333333333334,42.6666666666667"
+          Id="Package\Load CSV\Customer DataWarehouse"
+          TopLeft="153.749997708946,309.400001147609" />
+        <NodeLayout
+          Size="154.666666666667,42.6666666666667"
+          Id="Package\Load CSV\Read from CSV"
+          TopLeft="136.249997969717,5.33684354173841" />
+        <NodeLayout
+          Size="156,42.6666666666667"
+          Id="Package\Load CSV\Conditional Split"
+          TopLeft="339.374994942918,201.316665260295" />
+        <NodeLayout
+          Size="162.666666666667,42.6666666666667"
+          Id="Package\Load CSV\String to Numeric"
+          TopLeft="250.624996265396,92.9499983379245" />
         <EdgeLayout
           Id="Package\Load CSV.Paths[Flat File Source Output]"
-          TopLeft="109.833332849046,84.4035095575224">
+          TopLeft="213.58333130305,48.0035102084051">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="114.791665055479,24.3859661743802"
+              EndConnector="-107.708331629013,53.6359656513499"
               Start="0,0"
-              End="114.791665055479,16.8859661743802">
+              End="-107.708331629013,46.1359656513499">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,8.19298308719009" />
+                    End="0,22.8179828256749" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,8.19298308719009"
-                    Point2="0,12.1929830871901"
-                    Point3="4,12.1929830871901" />
+                    Point1="0,22.8179828256749"
+                    Point2="0,26.8179828256749"
+                    Point3="-4,26.8179828256749" />
                   <mssgle:LineSegment
-                    End="110.791665055479,12.1929830871901" />
+                    End="-103.708331629013,26.8179828256749" />
                   <mssgle:CubicBezierSegment
-                    Point1="110.791665055479,12.1929830871901"
-                    Point2="114.791665055479,12.1929830871901"
-                    Point3="114.791665055479,16.1929830871901" />
+                    Point1="-103.708331629013,26.8179828256749"
+                    Point2="-107.708331629013,26.8179828256749"
+                    Point3="-107.708331629013,30.8179828256749" />
                   <mssgle:LineSegment
-                    End="114.791665055479,16.8859661743802" />
+                    End="-107.708331629013,46.1359656513499" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -727,36 +1177,186 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load CSV.Paths[Derived Column Output]"
-          TopLeft="224.624997904524,151.456142398569">
+          TopLeft="189.874999674037,122.972809193088">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-22.5833327186604,30.5438610271293"
+              EndConnector="60.7499965913596,-8.6894775218305"
               Start="0,0"
-              End="-22.5833327186604,23.0438610271293">
+              End="53.2499965913596,-8.6894775218305">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11.2719305135647" />
+                    End="26.3749982956798,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,11.2719305135647"
-                    Point2="0,15.2719305135647"
-                    Point3="-4,15.2719305135647" />
+                    Point1="26.3749982956798,0"
+                    Point2="30.3749982956798,0"
+                    Point3="30.3749982956798,-4" />
                   <mssgle:LineSegment
-                    End="-18.5833327186604,15.2719305135647" />
+                    End="30.3749982956798,-4.6894775218305" />
                   <mssgle:CubicBezierSegment
-                    Point1="-18.5833327186604,15.2719305135647"
-                    Point2="-22.5833327186604,15.2719305135647"
-                    Point3="-22.5833327186604,19.2719305135647" />
+                    Point1="30.3749982956798,-4.6894775218305"
+                    Point2="30.3749982956798,-8.6894775218305"
+                    Point3="34.3749982956798,-8.6894775218305" />
                   <mssgle:LineSegment
-                    End="-22.5833327186604,23.0438610271293" />
+                    End="53.2499965913596,-8.6894775218305" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load CSV.Paths[Data Conversion Output]"
+          TopLeft="331.95832959873,135.616665004591">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="85.4166653441887,65.700000255704"
+              Start="0,0"
+              End="85.4166653441887,58.200000255704">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.850000127852" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.850000127852"
+                    Point2="0,32.850000127852"
+                    Point3="4,32.850000127852" />
+                  <mssgle:LineSegment
+                    End="81.4166653441887,32.850000127852" />
+                  <mssgle:CubicBezierSegment
+                    Point1="81.4166653441887,32.850000127852"
+                    Point2="85.4166653441887,32.850000127852"
+                    Point3="85.4166653441887,36.850000127852" />
+                  <mssgle:LineSegment
+                    End="85.4166653441887,58.200000255704" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load CSV.Paths[Conditional Split Default Output]"
+          TopLeft="417.374994942918,243.983331926962">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-160.958330567305,65.4166692206477"
+              Start="0,0"
+              End="-160.958330567305,57.9166692206477">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.7083346103239" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.7083346103239"
+                    Point2="0,32.7083346103239"
+                    Point3="-4,32.7083346103239" />
+                  <mssgle:LineSegment
+                    End="-156.958330567305,32.7083346103239" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-156.958330567305,32.7083346103239"
+                    Point2="-160.958330567305,32.7083346103239"
+                    Point3="-160.958330567305,36.7083346103239" />
+                  <mssgle:LineSegment
+                    End="-160.958330567305,57.9166692206477" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-151.093071533653,37.7083346103239,141.2278125,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="158.666666666667,42.6666666666667"
+          Id="Package\Load CSV\Error Destination"
+          TopLeft="432.499993555248,321.099994258285" />
+        <EdgeLayout
+          Id="Package\Load CSV.Paths[Error]"
+          TopLeft="442.041661609585,243.983331926962">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="69.791665278996,77.1166623313229"
+              Start="0,0"
+              End="69.791665278996,69.6166623313229">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.3164110990144" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.3164110990144"
+                    Point2="0,31.3164110990144"
+                    Point3="4,31.3164110990144" />
+                  <mssgle:LineSegment
+                    End="65.791665278996,31.3164110990144" />
+                  <mssgle:CubicBezierSegment
+                    Point1="65.791665278996,31.3164110990144"
+                    Point2="69.791665278996,31.3164110990144"
+                    Point3="69.791665278996,35.3164110990144" />
+                  <mssgle:LineSegment
+                    End="69.791665278996,69.6166623313229" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="23.367141233248,36.3164110990144,23.0573828125,9.421875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="186.666666666667,42.6666666666667"
+          Id="Package\Load CSV\Covnersion Error Rows"
+          TopLeft="453.749993238598,134.549997594059" />
+        <EdgeLayout
+          Id="Package\Load CSV.Paths[Data Conversion Error Output]"
+          TopLeft="413.291662932063,114.283331671258">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="40.4583303065351,41.5999992561341"
+              Start="0,0"
+              End="32.9583303065351,41.5999992561341">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="16.2291651532675,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.2291651532675,0"
+                    Point2="20.2291651532675,0"
+                    Point3="20.2291651532675,4" />
+                  <mssgle:LineSegment
+                    End="20.2291651532675,37.5999992561341" />
+                  <mssgle:CubicBezierSegment
+                    Point1="20.2291651532675,37.5999992561341"
+                    Point2="20.2291651532675,41.5999992561341"
+                    Point3="24.2291651532675,41.5999992561341" />
+                  <mssgle:LineSegment
+                    End="32.9583303065351,41.5999992561341" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-45.8572215654825,-17.43359375,132.1727734375,11.43359375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
