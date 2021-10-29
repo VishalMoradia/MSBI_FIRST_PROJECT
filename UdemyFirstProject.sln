@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "UdemyFirstProject", "UdemyFirstProject\UdemyFirstProject.dtproj", "{DFAFE267-502E-446F-AFF8-229C2146A6C2}"
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "SCD_SCHEMA_DATA_CONVERSION", "UdemyFirstProject\SCD_SCHEMA_DATA_CONVERSION.dtproj", "{DFAFE267-502E-446F-AFF8-229C2146A6C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
