@@ -35,6 +35,10 @@
       <Name>Country Table.dim</Name>
       <FullPath>Country Table.dim</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Time.dim</Name>
+      <FullPath>Time.dim</FullPath>
+    </ProjectItem>
   </Dimensions>
   <DataSources>
     <ProjectItem>
