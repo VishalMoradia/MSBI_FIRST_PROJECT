@@ -1,0 +1,172 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="1369af65-20b3-4d66-b5ce-768ae90c1e12" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Customer Data Warehouse</ID>
+  <Name>Customer Data Warehouse</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Customer Data Warehouse</DataSourceID>
+  <Schema>
+    <xs:schema id="Customer_x0020_Data_x0020_Warehouse" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Customer_x0020_Data_x0020_Warehouse" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="ff91cf9b-d26d-42fe-9d9b-b3930d8c8444">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_CountryTable" msprop:design-time-name="063a9e27-8649-41e9-92d4-2d47c390b617" msprop:DbTableName="CountryTable" msprop:FriendlyName="CountryTable" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CountryID" msprop:design-time-name="af98c65d-dddc-453d-a272-f5e8eb1c693a" msprop:DbColumnName="CountryID" msprop:FriendlyName="CountryID" type="xs:int" />
+                  <xs:element name="CountryName" msprop:design-time-name="03461181-eaba-4d09-a51a-a4086d7859a4" msprop:DbColumnName="CountryName" msprop:FriendlyName="CountryName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_FactCustomer" msprop:design-time-name="d99646d3-e75a-4060-af75-4c6d6aff3c57" msprop:DbTableName="FactCustomer" msprop:FriendlyName="FactCustomer" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CustomerCode" msprop:design-time-name="a8c904e4-8474-4934-9a8a-3598f58c9c8f" msprop:DbColumnName="CustomerCode" msprop:FriendlyName="CustomerCode">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CustomerName" msprop:design-time-name="d8d76a07-ddf5-4b8f-a62b-b23fa432906d" msprop:DbColumnName="CustomerName" msprop:FriendlyName="CustomerName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CustomerAccount" msprop:design-time-name="7cec2a22-301f-4528-8fec-e38484e7b400" msprop:DbColumnName="CustomerAccount" msprop:FriendlyName="CustomerAccount" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="SalesDate" msprop:design-time-name="3d6a7280-117c-480f-a0b9-92d3cc0634a8" msprop:DbColumnName="SalesDate" msprop:FriendlyName="SalesDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="country_id" msprop:design-time-name="2dbc59b9-4174-4fa7-9c7f-ad712b8c3d85" msprop:DbColumnName="country_id" msprop:FriendlyName="country_id" type="xs:int" minOccurs="0" />
+                  <xs:element name="state_id" msprop:design-time-name="c1e084b0-b5c7-4b3f-8e6a-eaad701cd6d7" msprop:DbColumnName="state_id" msprop:FriendlyName="state_id" type="xs:int" minOccurs="0" />
+                  <xs:element name="product_id" msprop:design-time-name="fccaf34b-3a3f-400b-9201-53a0fb066bf8" msprop:DbColumnName="product_id" msprop:FriendlyName="product_id" type="xs:int" minOccurs="0" />
+                  <xs:element name="salesperson_id" msprop:design-time-name="a818baec-b3b9-4119-b476-6a49900ae9e0" msprop:DbColumnName="salesperson_id" msprop:FriendlyName="salesperson_id" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_ProductTable" msprop:design-time-name="0b12a657-1bd1-4cee-8d3c-22df5df862e4" msprop:DbTableName="ProductTable" msprop:FriendlyName="ProductTable" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ProductID" msprop:design-time-name="efb020bf-4688-4c96-888e-c84bd7cf4060" msprop:DbColumnName="ProductID" msprop:FriendlyName="ProductID" type="xs:int" />
+                  <xs:element name="ProductName" msprop:design-time-name="512e529e-b7c4-4dee-8206-686269575e17" msprop:DbColumnName="ProductName" msprop:FriendlyName="ProductName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_SalesTable" msprop:design-time-name="84a5e888-9c3e-4883-96be-260b7a5f2d2c" msprop:DbTableName="SalesTable" msprop:FriendlyName="SalesTable" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SalesPersonID" msprop:design-time-name="6bc856df-bbc0-40ab-b8d2-c458f261845d" msprop:DbColumnName="SalesPersonID" msprop:FriendlyName="SalesPersonID" type="xs:int" />
+                  <xs:element name="SalesPersonName" msprop:design-time-name="8861d0c9-af0c-4725-9ca8-5c1abc3e027b" msprop:DbColumnName="SalesPersonName" msprop:FriendlyName="SalesPersonName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_StateTable" msprop:design-time-name="05209f10-7e4a-4aa1-959d-1bc51ee432e1" msprop:DbTableName="StateTable" msprop:FriendlyName="StateTable" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="StateID" msprop:design-time-name="216ce262-7947-4c51-a46b-f5fbadb561bd" msprop:DbColumnName="StateID" msprop:FriendlyName="StateID" type="xs:int" />
+                  <xs:element name="StateName" msprop:design-time-name="e95ae19b-e504-4dcc-8719-45095f1e387e" msprop:DbColumnName="StateName" msprop:FriendlyName="StateName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_CountryTable" />
+          <xs:field xpath="CountryID" />
+        </xs:unique>
+        <xs:unique name="dbo_FactCustomer_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_FactCustomer" />
+          <xs:field xpath="CustomerCode" />
+        </xs:unique>
+        <xs:unique name="dbo_ProductTable_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_ProductTable" />
+          <xs:field xpath="ProductID" />
+        </xs:unique>
+        <xs:unique name="dbo_SalesTable_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_SalesTable" />
+          <xs:field xpath="SalesPersonID" />
+        </xs:unique>
+        <xs:unique name="dbo_StateTable_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_StateTable" />
+          <xs:field xpath="StateID" />
+        </xs:unique>
+        <xs:keyref name="FK_tblcustomer_CountryTable" refer="Constraint1">
+          <xs:selector xpath=".//dbo_FactCustomer" />
+          <xs:field xpath="country_id" />
+        </xs:keyref>
+        <xs:keyref name="FK_tblcustomer_StateTable" refer="dbo_StateTable_Constraint1">
+          <xs:selector xpath=".//dbo_FactCustomer" />
+          <xs:field xpath="state_id" />
+        </xs:keyref>
+        <xs:keyref name="FK_tblcustomer_ProductTable" refer="dbo_ProductTable_Constraint1">
+          <xs:selector xpath=".//dbo_FactCustomer" />
+          <xs:field xpath="product_id" />
+        </xs:keyref>
+        <xs:keyref name="FK_tblcustomer_SalesTable" refer="dbo_SalesTable_Constraint1">
+          <xs:selector xpath=".//dbo_FactCustomer" />
+          <xs:field xpath="salesperson_id" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Customer_x0020_Data_x0020_Warehouse xmlns="" />
+  </Schema>
+</DataSourceView>
