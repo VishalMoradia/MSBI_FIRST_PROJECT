@@ -9,6 +9,8 @@ Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "SSASCustomerFinal", "SSASCu
 EndProject
 Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "SSRSCustomer", "SSRSCustomer\SSRSCustomer.rptproj", "{C63675D0-D1DB-4CD8-901B-0C6A8CD529C5}"
 EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "SSIS Data Profiling", "SSIS Data Profiling\SSIS Data Profiling.dtproj", "{E2AD19EB-63D7-4C01-A83A-4CC511EF836C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Default = Debug|Default
@@ -48,6 +50,14 @@ Global
 		{C63675D0-D1DB-4CD8-901B-0C6A8CD529C5}.Release|Default.ActiveCfg = Release
 		{C63675D0-D1DB-4CD8-901B-0C6A8CD529C5}.Release|Default.Build.0 = Release
 		{C63675D0-D1DB-4CD8-901B-0C6A8CD529C5}.Release|Default.Deploy.0 = Release
+		{E2AD19EB-63D7-4C01-A83A-4CC511EF836C}.Debug|Default.ActiveCfg = Development
+		{E2AD19EB-63D7-4C01-A83A-4CC511EF836C}.Debug|Default.Build.0 = Development
+		{E2AD19EB-63D7-4C01-A83A-4CC511EF836C}.DebugLocal|Default.ActiveCfg = Development
+		{E2AD19EB-63D7-4C01-A83A-4CC511EF836C}.DebugLocal|Default.Build.0 = Development
+		{E2AD19EB-63D7-4C01-A83A-4CC511EF836C}.Development|Default.ActiveCfg = Development
+		{E2AD19EB-63D7-4C01-A83A-4CC511EF836C}.Development|Default.Build.0 = Development
+		{E2AD19EB-63D7-4C01-A83A-4CC511EF836C}.Release|Default.ActiveCfg = Development
+		{E2AD19EB-63D7-4C01-A83A-4CC511EF836C}.Release|Default.Build.0 = Development
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
